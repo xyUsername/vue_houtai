@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
+    //入口文件
     entry:'./src/main.js',
     output:{
         path:path.join(__dirname+'/dist'),
@@ -66,7 +67,7 @@ module.exports = {
       plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-              template: './src/index.html',
+            template: './src/index.html',
             title:'许烨商城'
         })
     ]   
