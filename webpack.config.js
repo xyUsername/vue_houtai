@@ -36,7 +36,7 @@ module.exports = {
           }]
       },
       {
-        test: /\.(png|jpg|gif)/,
+        test: /\.(png|jpg|gif|ttf|woff)/,
         use: [{
             loader: 'url-loader',
             options: {
@@ -66,8 +66,8 @@ module.exports = {
       plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'template.html',
-            title:'测试'
+              template: './src/index.html',
+            title:'许烨商城'
         })
     ]   
 }
