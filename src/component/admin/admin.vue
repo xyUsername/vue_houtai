@@ -8,11 +8,11 @@
             </el-header>
                 <el-container class="admin_content">
                     <!-- 公共左侧 -->
-                    <el-aside width="300px">
+                    <el-aside width="200px">
                         <app-aside></app-aside>
                     </el-aside>
                         <!-- 变化的后台管理子页面 -->
-                        <el-main>
+                        <el-main class="el-main">
                             <router-view></router-view>
                         </el-main>
                 </el-container>
@@ -37,18 +37,22 @@
 <style scoped lang="less">
     .admin{
         height: 100%;
+        width: 100%;
         .el-header{
             text-align: right;
             line-height: 60px;
-            background-color: rgb(104, 238, 148);
+            background-color:#95ddee;
         }
         .el-container{
             height: 100%;
         }
         .admin_content{
-            width: 300px;
+            width: 200px;
+            width: 100%;
             height: 100%;
-            background-color: rgb(146, 235, 201);
+        }
+        .el-aside{
+            background-color: #95ddee;
         }
     }
 </style>

@@ -18,8 +18,8 @@
                 </el-form-item>
 
                 <el-form-item>
-                    <el-button type="success" @click="submitForm('abc')">登陆</el-button>
-                    <el-button @click="resetForm('abc')" class="right">重置</el-button>
+                    <el-button type="success" @click="submitForm('abc')" icon="el-icon-upload">登陆</el-button>
+                    <el-button @click="resetForm('abc')" class="right" icon="el-icon-warning">重置</el-button>
                 </el-form-item>
 
             </el-form>
@@ -110,7 +110,8 @@ export default {
     padding-right: 50px;
     padding-top: 30px;
     .right{
-        margin-left: 99px;
+        position: relative;
+        left: 50px;
         background-color: red;
     }
     .login{

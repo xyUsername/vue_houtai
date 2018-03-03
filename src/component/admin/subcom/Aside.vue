@@ -14,10 +14,11 @@
                 <!-- nav_title -->
                 <template slot="title">
                     <i class="el-icon-menu"></i>
+                    <!-- 大标题 -->
                     <span>{{ item.title }}</span>
                 </template>
 
-                <!-- nav_item 下拉内容 -->
+                <!-- nav_item 下拉内容.小标题 -->
                 <el-menu-item v-for="subItem in item.submenu" :key="subItem.text" :index="subItem.text">
                     <!-- 每个子title都是一个a链接, 可以点击, 所以使用router-link, 记得设置to属性 -->
                     <router-link :to="subItem.path">
@@ -38,44 +39,44 @@
                 menu: [
                     { title: '学员问题', submenu:
                         [
-                            { text: '内容管理', path: '/' },
-                            { text: '类别管理', path: '/' },
-                            { text: '评论管理', path: '/' },
+                            { text: '内容管理', path: '/admin/goods/list' },
+                            { text: '类别管理', path: '/admin/goods/detail/:id' },
+                            { text: '评论管理', path: '/admin/goods/comment'}
                         ]
                     },
-                    { title: '前端技术', submenu:
-                        [
-                            { text: '内容管理', path: '/' },
-                            { text: '类别管理', path: '/' },
-                            { text: '评论管理', path: '/' },
-                        ]
-                    },
-                    { title: '难点答疑', submenu:
-                        [
-                            { text: '内容管理', path: '/' },
-                            { text: '类别管理', path: '/' },
-                            { text: '评论管理', path: '/' },
-                        ]
-                    },
-                    { title: '资源下载', submenu:
-                        [
-                            { text: '内容管理', path: '/' },
-                            { text: '类别管理', path: '/' },
-                            { text: '评论管理', path: '/' },
-                        ]
-                    },
-                    { title: '商品管理', submenu:
-                        [
-                            { text: '内容管理', path: '/' },
-                            { text: '类别管理', path: '/' },
-                            { text: '评论管理', path: '/' },
-                        ]
-                    },
-                    { title: '订单管理', submenu:
-                        [
-                            { text: '订单列表', path: '/' },
-                        ]
-                    },
+                    // { title: '前端技术', submenu:
+                    //     [
+                    //         { text: '内容管理', path: '/' },
+                    //         { text: '类别管理', path: '/' },
+                    //         { text: '评论管理', path: '/' },
+                    //     ]
+                    // },
+                    // { title: '难点答疑', submenu:
+                    //     [
+                    //         { text: '内容管理', path: '/' },
+                    //         { text: '类别管理', path: '/' },
+                    //         { text: '评论管理', path: '/' },
+                    //     ]
+                    // },
+                    // { title: '资源下载', submenu:
+                    //     [
+                    //         { text: '内容管理', path: '/' },
+                    //         { text: '类别管理', path: '/' },
+                    //         { text: '评论管理', path: '/' },
+                    //     ]
+                    // },
+                    // { title: '商品管理', submenu:
+                    //     [
+                    //         { text: '内容管理', path: '/' },
+                    //         { text: '类别管理', path: '/' },
+                    //         { text: '评论管理', path: '/' },
+                    //     ]
+                    // },
+                    // { title: '订单管理', submenu:
+                    //     [
+                    //         { text: '订单列表', path: '/' },
+                    //     ]
+                    // },
                 ]
             }
         }
@@ -86,15 +87,16 @@
     .aside_logo{
         width: 100%;
         .logo{
-            margin-left: 110px;
+            margin-left: 60px;
             margin-top: 10px;
             display: block;
             border-radius: 50%;
+            border: 5px solid #a0fefe;
         }
     }
     .aside_menu{
-        margin-left: 50px;
+        width: 200px;
         margin-top: 10px;
-        background-color: rgb(105, 240, 161);
+        background-color:#a0fefe;
     }
 </style>    

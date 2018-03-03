@@ -2,7 +2,7 @@
     <div class="header">
         <el-dropdown @command="handleCommand">
             <span class="el-dropdown-link">
-                <span>许烨, {{ uname }}</span>
+                <span class="uname">许烨, {{ uname }}</span>
                 <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu slot="dropdown">
@@ -38,6 +38,10 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+    .uname{
+        color:rgb(255, 0, 13);
+        font-weight: 900;
+        font-size: 30px;
+    }
 </style>
